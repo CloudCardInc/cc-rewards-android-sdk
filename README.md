@@ -7,7 +7,7 @@ RewardsSDK by CloudCard
 Maven repository is a directory where all the dependencies such as jars, library files, plugins, or other artifacts that are required by the projects are stored. To integrate RewardsSDK into your android project, please specify it in your build.gradle:
 ​
 ```bash
-implementation 'io.bitbucket.ccstech.mobile.rewards.sdk:rewards-sdk:1.0.0-alpha.02'
+implementation 'io.bitbucket.ccstech.mobile.rewards.sdk:rewards-sdk:1.0.0-rc'
 ```
     
 ## Usage
