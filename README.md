@@ -7,7 +7,7 @@ RewardsSDK by CloudCard
 Maven repository is a directory where all the dependencies such as jars, library files, plugins, or other artifacts that are required by the projects are stored. To integrate RewardsSDK into your android project, please specify it in your build.gradle:
 ​
 ```bash
-implementation 'io.bitbucket.ccstech.mobile.rewards.sdk:rewards-sdk:1.0.0-rc'
+implementation 'io.bitbucket.ccstech.mobile.rewards.sdk:rewards-sdk:1.1.0-rc'
 ```
     
 ## Usage
@@ -84,6 +84,11 @@ onInitSuccess: ((rewards: Rewards) -> Unit),
 onInitSuccess is required parameter and trigger when rewards SDK initialize successfully.
 ​
 ```kotlin
+environment: Environment? = null,
+```
+select enviorment for sandbox or production
+
+```kotlin
 onInitFail: ((exception: Exception) -> Unit)? = null,
 ```
 onInitFail is optional parameter and can be send as null to initialize function. If its not null, then it will be triggered when rewards SDK initialization fails due to any reason.
@@ -113,6 +118,13 @@ enum class RewardLogoStyle {
 ```kotlin
 enum class RewardLandingScreen {
     REWARDS_FEED, ACCOUNT_SUMMARY
+}
+```
+#### EnvironmentSelection
+​
+```kotlin
+enum class Environment {
+    SANDBOX, PRODUCTION
 }
 ```
 ​
